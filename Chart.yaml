@@ -25,6 +25,5 @@ appVersion: "1.16.0"
 
 dependencies:
   - alias: redstone-server
-    name: redstone-server
+    name: redstone
     version: "0.1.0"
-    repository: file://charts/redstone
