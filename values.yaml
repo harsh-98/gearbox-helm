@@ -116,6 +116,17 @@ httpRoute:
         path:
           type: ReplacePrefixMatch
           replacePrefixMatch: /
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /optimism
+    service: optimism-third-eye-gearbox-helm
+    filters:
+    - type: URLRewrite
+      urlRewrite: # Note: urlRewrite is a deprecated field name, use path instead
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /
   # - matches:
   #   - path:
   #       type: PathPrefix
