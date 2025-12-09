@@ -32,15 +32,15 @@ spec:
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      env:
-        - name: REDSTONE_PORT
-          value: 8080
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.securityContext }}
-          securityContext:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          env:
+            - name: REDSTONE_PORT
+              value: "8080"
+          securityContext:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
