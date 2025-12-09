@@ -3,10 +3,17 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "{{ .Values.name }}-third-eye-config"
+  annotations:
+    avp.kubernetes.io/path: "configs/data/{{ .Values.name }}-third-eye-config"
 data:
-  {{ range .Files.Lines $pathfile }}
-  {{   if . }}
-  {{     $parts := regexSplit "=" . 2 }}
-  {{     index $parts 0  }}: {{ index $parts 1 }}
-  {{   end }}
-  {{ end }}
+  APP_NAME: <APP_NAME>
+  AMQP_ENABLE: <AMQP_ENABLE>
+  INTERVAL: <INTERVAL>
+  ROLLBACK: <ROLLBACK>
+  PORT: <PORT>
+  TENDERLY_TRACE: <TENDERLY_TRACE>
+  DEBT_DC_MATCHING: <DEBT_DC_MATCHING>
+  DISABLE_DEBT_ENGINE: <DISABLE_DEBT_ENGINE>
+  THROTTLE_DEBT_CAL: <THROTTLE_DEBT_CAL>
+  THROTTLE_HRS: <THROTTLE_HRS>
+  BATCH_SIZE_FOR_HISTORY: <BATCH_SIZE_FOR_HISTORY>

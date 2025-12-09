@@ -1,3 +1,4 @@
 envs
 _envs
 **/*.tgz
+hid.*.yaml
