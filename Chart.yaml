@@ -27,3 +27,4 @@ dependencies:
   - alias: redstone-server
     name: redstone
     version: "0.1.0"
+    condition: redstone.enabled
