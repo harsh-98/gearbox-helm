@@ -1,0 +1,12 @@
+{{- $pathfile := printf "envs/%s/.config.third-eye" .Values.name -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ .Values.name }}-third-eye-config"
+data:
+  {{ range .Files.Lines $pathfile }}
+  {{   if . }}
+  {{     $parts := regexSplit "=" . 2 }}
+  {{     index $parts 0  }}: {{ index $parts 1 }}
+  {{   end }}
+  {{ end }}

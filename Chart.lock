@@ -1,0 +1,6 @@
+dependencies:
+- name: redstone-server
+  repository: file://charts/redstone
+  version: 0.1.0
+digest: sha256:a8dd21b182f82c7aca349857a83bca7b744a6466992e2c7ed21ea0cd4726838e
+generated: "2025-12-09T14:21:06.629064+07:00"
