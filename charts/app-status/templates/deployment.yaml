@@ -13,10 +13,9 @@ spec:
       {{- include "app-status.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        configmap.reloader.stakater.com/reload: "app-status-config"
+        configmap2.reloader.stakater.com/reload: "app-status-config2"
       labels:
         {{- include "app-status.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
