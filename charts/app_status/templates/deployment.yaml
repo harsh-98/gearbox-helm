@@ -25,7 +25,7 @@ spec:
     spec:
       volumes:
         - configMap:
-            name: "{{ .Values.name }}-app_status-config"
+            name: "app-status-config"
           name: config.josnnet
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

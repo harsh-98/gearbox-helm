@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: "{{ .Values.name }}-app_status-config"
+  name: "app-status-config"
 data:
   config.jsonnet: |
     1
