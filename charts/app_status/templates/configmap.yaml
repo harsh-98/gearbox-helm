@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: "{{ .Values.name }}-app_status-config"
 data:
-  config.jsonnet: {}
+  config.jsonnet: |
+    1
