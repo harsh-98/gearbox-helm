@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "app-status-config2"
+  annotations:
+    avp.kubernetes.io/path: "configs/data/app-status-config"
+data:
+  APP_NAME: <APP_NAME>
+  AMQP_ENABLE: <AMQP_ENABLE>
+  CHAIN_ID: <CHAIN_ID>
+  PORT: <PORT>
+  CLOUDAMQP_URL: <CLOUDAMQP_URL>
