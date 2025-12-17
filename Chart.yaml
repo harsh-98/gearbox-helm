@@ -28,6 +28,6 @@ dependencies:
     name: redstone
     version: "0.1.0"
     condition: redstone.enabled
-  - name: app_status
+  - name: app-status
     version: "0.1.0"
     condition: app_status.enabled
