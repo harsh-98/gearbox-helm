@@ -30,4 +30,4 @@ dependencies:
     condition: redstone.enabled
   - name: app_status
     version: "0.1.0"
-    condition: appstatus.enabled
+    condition: app_status.enabled
