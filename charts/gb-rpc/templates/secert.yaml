@@ -1,0 +1,11 @@
+{{- $pathfile := printf "envs/%s/.secret.third-eye" .Values.name -}}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "gb-rpc-secret"
+  annotations:
+    avp.kubernetes.io/path: "configs/data/gb-rpc-secret"
+stringData:
+  AMQP_ENABLE: <AMQP_ENABLE>
+  CLOUDAMQP_URL: <CLOUDAMQP_URL>
+  APP_NAME: <APP_NAME>

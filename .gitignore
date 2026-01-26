@@ -3,3 +3,4 @@ _envs
 **/*.tgz
 **/hid.*
 z/
+manual
