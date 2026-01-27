@@ -126,6 +126,17 @@ httpRoute:
         path:
           type: ReplacePrefixMatch
           replacePrefixMatch: /
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /rpc
+    service: gearbox-gb-rpc
+    filters:
+    - type: URLRewrite
+      urlRewrite: # Note: urlRewrite is a deprecated field name, use path instead
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /
   # - matches:
   #   - path:
   #       type: PathPrefix
