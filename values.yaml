@@ -89,8 +89,8 @@ httpRoute:
     sectionName: http
     # namespace: default
   # Hostnames matching HTTP header.
-  hostnames:
-  - third-eye.gearbox.kubernetes
+  # hostnames:
+  # - third-eye.gearbox.kubernetes
   # List of rules and filters applied.
   rules:
   - matches:
